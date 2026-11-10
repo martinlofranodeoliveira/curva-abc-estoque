@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "curva-abc-estoque"
+version = "1.0.0"
+description = "Classificação ABC de Pareto, cobertura e ponto de pedido com frações exatas e memória de cálculo."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Martin Lofrano / LOFRANO TECNOLOGIA"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Manufacturing",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Office/Business",
+]
+
+[project.scripts]
+curva-abc-estoque = "curva_abc_estoque.cli:main"
+
+[project.urls]
+Homepage = "https://lofranotecnologia.com.br/"
+Repository = "https://github.com/martinlofranodeoliveira/curva-abc-estoque"
+Issues = "https://github.com/martinlofranodeoliveira/curva-abc-estoque/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["curva_abc_estoque"]
+namespaces = false
+
+[tool.setuptools.package-data]
+curva_abc_estoque = ["data/*.json"]

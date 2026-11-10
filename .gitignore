@@ -1,0 +1,13 @@
+.venv*/
+local/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.openai/
+.impeccable/
+.env*
+exemplo-curva-abc.zip
+release/
+
